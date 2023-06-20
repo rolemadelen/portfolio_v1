@@ -1,0 +1,35 @@
+import React from 'react';
+import { useState, useRef, useEffect } from 'react';
+import TRUNK from 'vanta/dist/vanta.trunk.min'
+
+const Vanta: React.FC = () => {
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const refVanta = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(TRUNK({
+        el: refVanta.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        color: 0x6987c0,
+        backgroundColor: 0xffffff,
+        chaos: 2.5,
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
+
+  return (
+    <>
+      <div className='min-h-screen z-[-1]' ref={refVanta}></div>
+    </>
+  )
+}
+
+export default Vanta;
