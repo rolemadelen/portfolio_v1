@@ -1,6 +1,4 @@
 import './App.css'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import { useCallback, useEffect, useRef } from 'react'
 import Skills from './components/Skills'
 import Intro from './components/Intro'
@@ -12,8 +10,6 @@ const App: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    AOS.init()
-
     videoRef.current = document.querySelector('video')
     scrollRef.current = document.querySelector('.right')
   }, [])
@@ -44,25 +40,25 @@ const App: React.FC = () => {
         <div className='flex flex-col lg:flex-row h-screen overflow-scroll' onScroll={handleOnScroll}>
           <header className='left main header mx-16 pt-16 lg:py-20 flex flex-col justify-between sm:mx-20'>
             <div>
-              <h1 className='text-7xl font-light text-gray-800' data-aos='fade-right' data-aos-duration='500'>
+              <h1 className='text-7xl font-light text-gray-800'>
                 Jii Eu
               </h1>
-              <h2 className='mb-12 text-md font-light text-gray-500' data-aos='fade-right' data-aos-duration='500'>
+              <h2 className='mb-12 text-md font-light text-gray-500'>
                 Front-End Developer
               </h2>
-              <div className='text-lg sm:text-xl mb-32 max-w-[30rem] font-light text-gray-700' data-aos='fade-right' data-aos-duration='1000'>
+              <div className='text-lg sm:text-xl mb-32 max-w-[30rem] font-light text-gray-700'>
                 I'm a front-end developer currently residing in Kentucky, passionate about crafting creative and simple digital experiences.
               </div>
             </div>
             <nav className='text-sm md:text-md border-b-[1px] border-[#ccc] lg:border-0 pb-20 lg:pb-10'>
               <ul className='sns mb-8'>
-                <li className='sns-item' data-aos='fade-right' data-aos-duration='500'>
+                <li className='sns-item'>
                   <a href='https://github.com/rolemadelen' target="_blank" rel="noopener noreferrer">gthb</a>
                 </li>
-                <li className='sns-item' data-aos='fade-right' data-aos-duration='1000'>
+                <li className='sns-item'>
                   <a href='https://www.linkedin.com/in/jiieu/' target="_blank" rel="noopener noreferrer">lnkdn</a>
                 </li>
-                <li className='sns-item' data-aos='fade-right' data-aos-duration='1500'>
+                <li className='sns-item'>
                   <a href='https://www.bepersistent.dev/' target="_blank" rel="noopener noreferrer">blg</a>
                 </li>
               </ul>
@@ -73,7 +69,7 @@ const App: React.FC = () => {
               </div>
             </nav>
           </header>
-          <div className='right lg:overflow-scroll h-auto py-20 lg:pb-32' data-aos='fade-left' data-aos-duration='1500' onScroll={handleOnScroll} ref={scrollRef}>
+          <div className='right lg:overflow-scroll h-auto py-20 lg:pb-32' onScroll={handleOnScroll} ref={scrollRef}>
             <Intro />
             <Experience />
             <Skills />
