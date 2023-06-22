@@ -36,7 +36,7 @@ const App: React.FC = () => {
     videoRef.current.currentTime = scrollRef.current.scrollTop / rate
   }, [])
 
-  const handleOnWheel = useCallback((e: any) => {
+  const handleOnWheel = useCallback((e: React.WheelEvent) => {
     if (scrollRef && scrollRef.current)
       scrollRef.current.scrollTop += (e.deltaY / 2);
   }, [])
