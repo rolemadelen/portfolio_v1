@@ -31,11 +31,12 @@ const App: React.FC = () => {
 
   return (
     <div className='max-w-screen-2xl mx-auto relative' onWheel={handleOnWheel}>
-      <video controls={false} muted={true} loop={false} autoPlay={true} className='bottom-0 left-0 cxl:left-auto fixed z-[-1]' ref={videoRef}>
+      <video controls={false} muted={true} loop={false} autoPlay={true} className='hidden bottom-0 left-0 cxl:left-auto fixed z-[-1]' ref={videoRef}>
         <source src='/src/assets/madelen-video.webm' type='video/webm; codecs="vp8.0, vorbis"' />
         <source src='/src/assets/madelen-video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
       </video>
 
+      <div className='madelen'></div>
       <div className='background max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] overflow-hidden'>
         <div className='flex flex-col lg:flex-row h-screen overflow-scroll' onScroll={handleOnScroll}>
           <header className='left main header mx-16 pt-16 lg:py-20 flex flex-col justify-between sm:mx-20'>
