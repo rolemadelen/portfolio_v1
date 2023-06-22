@@ -9,7 +9,6 @@ $--skill-p: 0.1rem 0.3rem;
 $--skill-fs: 0.8rem;
 $--bc: #e5e5e5;
 
-
 :root {
   font-family: 'Montserrat', sans-serif;
   background-color: #f4ede2;
@@ -25,6 +24,17 @@ div::-webkit-scrollbar {
   display: none;
 }
 
+.madelen {
+  background-image: url(/src/assets/madelen.png);
+  background-size: cover;
+  width: clamp(25rem, 50vw ,100rem);
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform: rotateY(180deg);
+}
 
 .cursor {
   z-index: 1000;
