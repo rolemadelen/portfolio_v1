@@ -14,14 +14,6 @@ const App: React.FC = () => {
   useEffect(() => {
     AOS.init()
 
-    setTimeout(() => {
-      const list = Array.from(document.querySelectorAll('[data-aos]'))
-      list.map((el) => {
-        el.removeAttribute('data-aos')
-        el.removeAttribute('data-aos-duration')
-      })
-    }, 2000)
-
     videoRef.current = document.querySelector('video')
     scrollRef.current = document.querySelector('.right')
   }, [])
@@ -43,7 +35,7 @@ const App: React.FC = () => {
 
   return (
     <div className='max-w-screen-2xl mx-auto relative' onWheel={handleOnWheel}>
-      <video controls={false} muted={true} loop={false} autoPlay={true} className='bottom-0 left-0 fixed z-[-1]' ref={videoRef}>
+      <video controls={false} muted={true} loop={false} autoPlay={true} className='bottom-0 left-0 xl:left-auto fixed z-[-1]' ref={videoRef}>
         <source src='/src/assets/madelen-video.webm' type='video/webm; codecs="vp8.0, vorbis"' />
         <source src='/src/assets/madelen-video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
       </video>
@@ -64,13 +56,13 @@ const App: React.FC = () => {
             </div>
             <nav className='text-sm md:text-md border-b-[1px] border-[#ccc] lg:border-0 pb-20 lg:pb-10'>
               <ul className='sns mb-8'>
-                <li className='sns-item' data-aos='fade-right' data-aos-duration='1000'>
+                <li className='sns-item' data-aos='fade-right' data-aos-duration='500'>
                   <a href='https://github.com/rolemadelen' target="_blank" rel="noopener noreferrer">gthb</a>
                 </li>
-                <li className='sns-item' data-aos='fade-right' data-aos-duration='1500'>
+                <li className='sns-item' data-aos='fade-right' data-aos-duration='1000'>
                   <a href='https://www.linkedin.com/in/jiieu/' target="_blank" rel="noopener noreferrer">lnkdn</a>
                 </li>
-                <li className='sns-item' data-aos='fade-right' data-aos-duration='2000'>
+                <li className='sns-item' data-aos='fade-right' data-aos-duration='1500'>
                   <a href='https://www.bepersistent.dev/' target="_blank" rel="noopener noreferrer">blg</a>
                 </li>
               </ul>
@@ -81,7 +73,7 @@ const App: React.FC = () => {
               </div>
             </nav>
           </header>
-          <div className='right lg:overflow-scroll h-auto py-20 lg:pb-32' data-aos='fade-up' data-aos-duration='1500' onScroll={handleOnScroll} ref={scrollRef}>
+          <div className='right lg:overflow-scroll h-auto py-20 lg:pb-32' data-aos='fade-left' data-aos-duration='1500' onScroll={handleOnScroll} ref={scrollRef}>
             <Intro />
             <Experience />
             <Skills />
