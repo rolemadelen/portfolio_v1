@@ -1,69 +1,95 @@
 import './App.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import Skills from './components/Skills'
 import Intro from './components/Intro'
 import Experience from './components/Experience'
+import Projects from './components/Projects'
 
 const App: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const scrollRef = useRef<HTMLDivElement | null>(null)
+
   useEffect(() => {
     AOS.init()
+
+    setTimeout(() => {
+      const list = Array.from(document.querySelectorAll('[data-aos]'))
+      list.map((el) => {
+        el.removeAttribute('data-aos')
+        el.removeAttribute('data-aos-duration')
+      })
+    }, 2000)
+
+    videoRef.current = document.querySelector('video')
+    scrollRef.current = document.querySelector('.right')
   }, [])
 
-  const handleMouseMove = (e) => {
-    const c = document.querySelector('.cursor');
-    c.style.top = `${e.pageY}px`;
-    c.style.left = `${e.pageX}px`;
-  }
+  const handleOnScroll = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!videoRef || !videoRef.current) return;
+
+    videoRef.current?.pause();
+    scrollRef.current = e.currentTarget as HTMLDivElement;
+
+    const rate = (scrollRef.current.scrollHeight - document.body.scrollHeight) / videoRef.current.duration
+    videoRef.current.currentTime = scrollRef.current.scrollTop / rate
+  }, [])
+
+  const handleOnWheel = useCallback((e: any) => {
+    if (scrollRef && scrollRef.current)
+      scrollRef.current.scrollTop += (e.deltaY / 2);
+  }, [])
 
   return (
-    <div onMouseMove={handleMouseMove}>
-      <span className='cursor absolute w-3 h-3 rounded-full bg-gray-700'></span>
-      <video muted={true} loop={true} autoPlay={true} className='bottom-0 right-0 fixed z-[-1]'>
-        <source src='/src/assets/madelen-video.mp4' type="video/mp4" />
+    <div className='max-w-screen-2xl mx-auto relative' onWheel={handleOnWheel}>
+      <video controls={false} muted={true} loop={false} autoPlay={true} className='bottom-0 left-0 h-fit lg:h-screen fixed z-[-1]' ref={videoRef}>
+        <source src='/src/assets/madelen-video.webm' type='video/webm; codecs="vp8.0, vorbis"' />
+        <source src='/src/assets/madelen-video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
       </video>
 
-      <div className='background fixed border-[1px] border-black z-[-1]'>
-      </div>
-      <div className='flex flex-col lg:flex-row h-[92vh] px-16'>
-        <header className='left main header h-full flex flex-col justify-between py-16'>
-          <div>
-            <h1 className='text-7xl text-gray-800' data-aos='fade-right' data-aos-duration='500'>
-              Jii Eu
-            </h1>
-            <h2 className='mb-12 text-xl text-gray-600' data-aos='fade-right' data-aos-duration='500'>
-              Front-End Developer
-            </h2>
-            <div className='text-2xl max-w-[30rem] text-gray-700' data-aos='fade-right' data-aos-duration='2000'>
-              I'm a front-end developer currently residing in Kentucky, passionate about crafting minimalist and simple digital experiences.
+      <div className='background max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] overflow-hidden'>
+        <div className='flex flex-col lg:flex-row h-screen overflow-scroll' onScroll={handleOnScroll}>
+          <header className='left main header mx-16 pt-16 lg:py-20 flex flex-col justify-between sm:mx-20'>
+            <div>
+              <h1 className='text-7xl font-light text-gray-800' data-aos='fade-right' data-aos-duration='500'>
+                Jii Eu
+              </h1>
+              <h2 className='mb-12 text-md font-light text-gray-500' data-aos='fade-right' data-aos-duration='500'>
+                Front-End Developer
+              </h2>
+              <div className='text-lg sm:text-xl mb-32 max-w-[30rem] font-light text-gray-700' data-aos='fade-right' data-aos-duration='1000'>
+                I'm a front-end developer currently residing in Kentucky, passionate about crafting creative and simple digital experiences.
+              </div>
             </div>
+            <nav className='text-sm md:text-md border-b-[1px] border-[#ccc] lg:border-0 pb-20 lg:pb-10'>
+              <ul className='sns mb-8'>
+                <li className='sns-item' data-aos='fade-right' data-aos-duration='1000'>
+                  <a href='https://github.com/rolemadelen' target="_blank" rel="noopener noreferrer">gthb</a>
+                </li>
+                <li className='sns-item' data-aos='fade-right' data-aos-duration='1500'>
+                  <a href='https://www.linkedin.com/in/jiieu/' target="_blank" rel="noopener noreferrer">lnkdn</a>
+                </li>
+                <li className='sns-item' data-aos='fade-right' data-aos-duration='2000'>
+                  <a href='https://www.bepersistent.dev/' target="_blank" rel="noopener noreferrer">blg</a>
+                </li>
+              </ul>
+              <div className='text-gray-800'>
+                <a href="mailto:eu.jii@protonmail.com">
+                  eu.jii@protonmail.com
+                </a>
+              </div>
+            </nav>
+          </header>
+          <div className='right lg:overflow-scroll h-auto py-20 lg:pb-32' data-aos='fade-up' data-aos-duration='1500' onScroll={handleOnScroll} ref={scrollRef}>
+            <Intro />
+            <Experience />
+            <Skills />
+            <Projects />
           </div>
-          <nav className='header-nav text-2xl w-5/12 text-gray-700'>
-            <div data-aos='fade-right' data-aos-duration='1500'>
-              <a href='#' className='hover:bg-black text-black hover:text-white'>
-                Work
-              </a>
-            </div>
-            <div data-aos='fade-right' data-aos-duration='2000'>
-              <a href='#' className='hover:bg-black text-black hover:text-white'>
-                About
-              </a>
-            </div>
-            <div data-aos='fade-right' data-aos-duration='2500'>
-              <a href='#' className='hover:bg-black text-black hover:text-white'>
-                Contact
-              </a>
-            </div>
-          </nav>
-        </header>
-        <div className='right lg:overflow-scroll h-full py-16' data-aos='fade-up' data-aos-duration='1500'>
-          <Intro />
-          <Skills />
-          <Experience />
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
