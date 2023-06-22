@@ -43,7 +43,7 @@ const App: React.FC = () => {
 
   return (
     <div className='max-w-screen-2xl mx-auto relative' onWheel={handleOnWheel}>
-      <video controls={false} muted={true} loop={false} autoPlay={true} className='bottom-0 left-0 h-fit lg:h-screen fixed z-[-1]' ref={videoRef}>
+      <video controls={false} muted={true} loop={false} autoPlay={true} className='bottom-0 left-0 fixed z-[-1]' ref={videoRef}>
         <source src='/src/assets/madelen-video.webm' type='video/webm; codecs="vp8.0, vorbis"' />
         <source src='/src/assets/madelen-video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
       </video>
