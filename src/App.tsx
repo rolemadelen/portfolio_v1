@@ -33,11 +33,7 @@ const App: React.FC = () => {
       splashPortfolio.style.opacity = '0.0'
       if (videoRef.current) videoRef.current.style.opacity = '1.0'
       if (madelenRef.current) madelenRef.current.style.opacity = '1.0'
-      bg.style.width = "100%"
-
-      setTimeout(() => {
-        bg.style.width = "auto"
-      }, 1000)
+      bg.style.width = "90%"
     }, 3000)
 
   }, [])
@@ -74,8 +70,8 @@ const App: React.FC = () => {
         </video>
         <div className='madelen opacity-0'></div>
         <div className='background max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] overflow-hidden'>
-          <div className='flex flex-col lg:flex-row h-screen overflow-scroll' onScroll={handleOnScroll}>
-            <header className='left main header mx-8 pt-4 lg:py-20 flex flex-col justify-between'>
+          <div className='flex flex-col lg:flex-row h-screen overflow-scroll'>
+            <header className='left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between'>
               <div>
                 <h1 className='text-5xl font-light text-gray-800'>
                   Jii Eu
@@ -106,7 +102,7 @@ const App: React.FC = () => {
                 </div>
               </nav>
             </header>
-            <div className='right lg:overflow-scroll h-auto py-20 lg:pb-32' onScroll={handleOnScroll} ref={scrollRef}>
+            <div className='right lg:overflow-scroll h-auto py-16 lg:pt-8 lg:pb-32' onScroll={handleOnScroll} ref={scrollRef}>
               <Intro />
               <Experience />
               <Skills />
