@@ -10,7 +10,7 @@ const Intro: React.FC = () => {
       </p>
       <p>
         When I'm not immersed in coding, you'll likely find me enjoying the simple
-        pleasures of life – walking my <span className='puppy'>pu</span><span className='puppy2'>ppy</span>, creating art on my iPad,
+        pleasures of life – walking my <span className='puppy font-[500]'>pu</span><span className='puppy2 font-[500]'>ppy</span>, creating art on my iPad,
         playing taiko, or practicing my skills on the shinobue flute.
       </p>
       <p>

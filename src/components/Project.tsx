@@ -16,7 +16,7 @@ const Project: React.FC<Props> = ({ imgsrc, title, skills, link, children }) => 
   }
 
   return (
-    <div className='project-item flex flex-col sm:flex-row gap-8 mb-8 p-4 max-w-[50rem] relative' onClick={handleOnClick}>
+    <div className='project-item flex flex-col sm:flex-row gap-8 mb-8 p-4 max-w-[50rem] relative duration-200 ease-in-out' onClick={handleOnClick}>
       <img src={imgsrc} loading={'lazy'} className='absolute w-full h-full z-[-1] opacity-5 sm:relative sm:opacity-100 rounded-md sm:w-32 sm:h-20 md:w-48 md:h-28 shadow-md' alt={title} />
       <div className='detail flex-1'>
         <div className='text-md mb-3'>{title} ⬀</div>

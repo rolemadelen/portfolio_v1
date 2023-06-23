@@ -4,20 +4,14 @@ import Skills from './components/Skills'
 import Intro from './components/Intro'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
-import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 const App: React.FC = () => {
   const madelenRef = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const scrollRef = useRef<HTMLDivElement | null>(null)
-  const topRef = useRef<HTMLAnchorElement | null>(null)
 
   useEffect(() => {
-    videoRef.current = document.querySelector('video')
-    scrollRef.current = document.querySelector('.right')
-    madelenRef.current = document.querySelector('.madelen')
-    topRef.current = document.querySelector('.top-btn')
-
     const bg = document.querySelector('.background') as HTMLDivElement
     const splashName = document.querySelector('.splash-name') as HTMLHeadingElement
     const splashPortfolio = document.querySelector('.splash-portfolio') as HTMLHeadingElement
@@ -47,8 +41,8 @@ const App: React.FC = () => {
 
   const handleOnScroll = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (videoRef && videoRef.current) {
-      videoRef && videoRef.current && videoRef.current?.pause();
-      scrollRef.current = e.currentTarget as HTMLDivElement;
+      videoRef && videoRef.current && videoRef.current?.pause()
+      scrollRef.current = e.currentTarget as HTMLDivElement
 
       const rate = (scrollRef.current.scrollHeight - document.body.scrollHeight) / videoRef.current.duration
       videoRef.current.currentTime = scrollRef.current.scrollTop / rate
@@ -67,19 +61,19 @@ const App: React.FC = () => {
   return (
     <>
       <div className='splash absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-3xl text-align text-center'>
-        <h1 className='splash-name opacity-0 duration-1000'>Jii Eu</h1>
-        <h2 className='splash-portfolio opacity-0 duration-1000 text-gray-600'>Portfolio</h2>
+        <h1 className='splash-name opacity-0 transition-opacity duration-1000'>Jii Eu</h1>
+        <h2 className='splash-portfolio opacity-0 duration-1000 transition-opacity text-gray-600'>Portfolio</h2>
       </div >
-      <div className='max-w-screen-2xl mx-auto relative' onWheel={handleOnWheel}>
-        <video onContextMenu={handleOnContextMenu} controls={false} muted={true} loop={false} autoPlay={false} ref={videoRef} className='opacity-0'>
+      <div className='relative' onWheel={handleOnWheel}>
+        <video onContextMenu={handleOnContextMenu} controls={false} muted={true} loop={false} autoPlay={false} ref={videoRef} className='opacity-0 z-[-1] fixed left-0 bottom-0 h-full transition-opacity duration-1000 ease-in-out'>
           <source src='/src/assets/madelen-video.webm' type='video/webm; codecs="vp8.0, vorbis"' />
           <source src='/src/assets/madelen-video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
         </video>
-        <div className='madelen opacity-0'></div>
-        <div className='background max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] overflow-hidden'>
+        <div className='madelen opacity-0 fixed left-0 bottom-0 bg-cover h-screen w-screen z-[-1] transition-opacity duration-1000 ease-in-out' ref={madelenRef}></div>
+        <div className='background w-0 rounded-sm max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] transition-width duration-1000 ease-in-out overflow-hidden'>
           <div className='flex flex-col lg:flex-row h-screen overflow-scroll'>
-            <header className='left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between' id="top">
-              <div>
+            <aside className='aside left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between' id="top">
+              <header>
                 <h1 className='text-5xl font-light text-gray-800'>
                   Jii Eu
                 </h1>
@@ -89,32 +83,32 @@ const App: React.FC = () => {
                 <div className='text-md mb-32 max-w-[35rem] font-light text-gray-700'>
                   I'm a front-end developer currently residing in Kentucky, passionate about crafting creative and simple digital experiences.
                 </div>
-              </div>
-              <nav className='text-sm border-b-[1px] border-[#ccc] lg:border-0 pb-20 lg:pb-10 text-gray-800'>
-                <ul className='sns mb-8'>
-                  <li className='sns-item'>
-                    <a href='https://github.com/rolemadelen' target="_blank" rel="noopener noreferrer">GitHub</a>
+              </header>
+              <nav className='nav text-sm border-b-[1px] border-[#ccc] lg:border-0 pb-20 lg:pb-10 text-gray-800'>
+                <ul className='nav-list mb-8'>
+                  <li>
+                    <a className='nav-item' href='https://github.com/rolemadelen' target="_blank" rel="noopener noreferrer">GitHub</a>
                   </li>
-                  <li className='sns-item'>
-                    <a href='https://www.linkedin.com/in/jiieu/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <li>
+                    <a className='nav-item' href='https://www.linkedin.com/in/jiieu/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </li>
-                  <li className='sns-item'>
-                    <a href='https://www.bepersistent.dev/' target="_blank" rel="noopener noreferrer">Blog</a>
+                  <li>
+                    <a className='nav-item' href='https://www.bepersistent.dev/' target="_blank" rel="noopener noreferrer">Blog</a>
                   </li>
                 </ul>
                 <div>
-                  <a href="mailto:eu.jii@protonmail.com">
+                  <a className='nav-item' href="mailto:eu.jii@protonmail.com">
                     eu.jii@protonmail.com
                   </a>
                 </div>
               </nav>
-            </header>
-            <div className='right lg:overflow-scroll h-auto pt-20 mb-16 lg:py-8 ' onScroll={handleOnScroll} ref={scrollRef}>
+            </aside>
+            <div className='content lg:overflow-scroll h-auto pt-20 mb-16 lg:py-8 ' onScroll={handleOnScroll} ref={scrollRef}>
               <Intro />
               <Experience />
               <Skills />
               <Projects />
-              <Contact />
+              <Footer />
               <a href="#top" className='mr-8 mb-0 md:mb-8 float-right text-xs text-gray-500 rounded-md border-gray-300 border-[1px] w-10 h-10 flex justify-center items-center lg:hidden'>top</a>
             </div>
           </div>

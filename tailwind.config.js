@@ -9,6 +9,9 @@ export default {
       screens: {
         cxl: '1920px',
       },
+      transitionProperty: {
+        'width': 'width',
+      }
     },
   },
   plugins: [],

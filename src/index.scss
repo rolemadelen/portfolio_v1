@@ -7,7 +7,21 @@ $--skill-bc: #ccc;
 $--skill-m: 0 0.5rem 0.5rem 0;
 $--skill-p: 0.1rem 0.3rem;
 $--skill-fs: 0.8rem;
-$--bc: #e5e5e5;
+
+$--border-r: 5px;
+$--border-c: #e5e5e5;
+
+$--pad: max(20px, 4vmin);
+
+$--alabaster: #f4ede2;
+$--gray: #bbb;
+$--bright-gray: #efefefec;
+$--davy-gray: #555;
+$--sonic-silver: #777;
+$--blizzard-blue: #b5e0f655;
+$--beau-blue: #b9d8e8;
+$--bubble-gum-pink: #fec4cd55;
+$--metalic-pink: #edb1b7;
 
 * {
   overscroll-behavior: none;
@@ -17,11 +31,7 @@ $--bc: #e5e5e5;
 
 :root {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f4ede2;
-  --pad: max(20px, 4vmin);
-}
-
-.right a {
+  background-color: $--alabaster;
 }
 
 div::-webkit-scrollbar {
@@ -30,65 +40,30 @@ div::-webkit-scrollbar {
 
 .madelen {
   background-image: url(/src/assets/madelen.png);
-  background-size: cover;
-  width: clamp(30rem, 50vw ,100rem);
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  position: fixed;
-  left:0;
-  bottom: 0;
   transform: rotateY(180deg);
-  transition: opacity 1s ease-in-out;
-}
-
-.cursor {
-  z-index: 1000;
-  user-select: none;
-  pointer-events: none;
-  transition: all 50ms ease-in-out;
 }
 
 video {
-  z-index: -1;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  height: 100%;
   transform: rotateY(180deg) translate3d(0, 0, 0);
   -ms-transform: rotateY(180deg) translate3d(0, 0, 0);
-  transition: opacity 1s ease-in-out;
 }
 
 .background {
-  width: 0;
-  background-color: #efefefec;
-  border-radius: 5px;
-
-  transition: width 1s ease-in-out;
+  background-color: $--bright-gray;
 }
 
-.background,
-.header {
-  top: var(--pad);
-  right: var(--pad);
-  bottom: var(--pad);
-  left: var(--pad);
-}
-
-.contact {
-  .link {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-thickness: from-font;
-  }
+.background {
+  top: $--pad;
+  right: $--pad;
+  bottom: $--pad;
+  left: $--pad;
 }
 
 .left {
   flex: 0.5;
 
-  nav {
-    .sns-item {
+  .nav {
+    &-item {
       letter-spacing: 1px;
       transition: all 0.2s ease-in-out;
     }
@@ -99,23 +74,27 @@ video {
   }
 }
 
-.right {
+.content {
   overscroll-behavior: none;
   flex: 0.6;
 
-  h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin: 6rem auto 2rem;
-    letter-spacing: 1px;
+  .experience,
+  .skills,
+  .projects {
+    .title {
+      font-size: 2rem;
+      text-align: center;
+      margin: 6rem auto 2rem;
+      letter-spacing: 1px;
+    }
   }
 
   p {
     margin-bottom: 2rem;
   }
 
-  ul {
-    .title {
+  .skills {
+    &-title {
       text-transform: uppercase;
       text-decoration: underline;
       text-underline-offset: 5px;
@@ -128,16 +107,16 @@ video {
 
     li {
       font-size: 0.9rem;
-      color: #555;
+      color: $--davy-gray;
 
       &.note {
-        color: #777;
+        color: $--sonic-silver;
         margin-bottom: 0.5rem;
       }
     }
   }
 
-  .skill-list .skill-item {
+  .skill-item {
     margin: $--skill-m;
     border: 1px solid $--skill-bc;
     border-radius: $--skill-br;
@@ -146,27 +125,25 @@ video {
 
     &:nth-child(odd) {
       &:hover {
-        background-color: #b5e0f655;
-        border: 1px solid #b9d8e8;
+        background-color: $--blizzard-blue;
+        border: 1px solid $--beau-blue;
       }
     }
     &:nth-child(even) {
       &:hover {
-        background-color: #fec4cd55;
-        border: 1px solid #edb1b7;
+        background-color: $--bubble-gum-pink;
+        border: 1px solid $--metalic-pink;
       }
     }
   }
 
   .experience-item,
   .project-item {
-    transition: all 0.2s ease-in-out;
-    border-radius: 5px;
+    border-radius: $--skill-br;
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0px 0px 3px 0px #bbb;
-      background-color: #eeeeee55;
+      box-shadow: 0px 0px 3px 0px $--gray;
     }
   }
 
@@ -176,25 +153,12 @@ video {
   .puppy2 {
     cursor: url('/src/assets/puppy2.png'), default;
   }
-
-  .puppy, .puppy2 {
-    font-weight: 400;
-    text-decoration: underline;
-    text-decoration-thickness: from-font;
-    text-underline-offset: 5px;
-  }
 }
 
 h1 {
   line-height: 1.35;
   letter-spacing: 1px;
 }
-
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 
 table, th, td, thead, tbody {
   padding: 1.25rem;
@@ -204,7 +168,7 @@ table, th, td, thead, tbody {
 .all-projects {
   table {
     tr:first-of-type {
-      border-bottom: 1px solid $--bc;
+      border-bottom: 1px solid $--border-c;
     }
 
     th {
@@ -213,8 +177,8 @@ table, th, td, thead, tbody {
     }
 
     tr + tr {
-      border-top: 1px solid $--bc;
-      border-bottom: 1px solid $--bc;
+      border-top: 1px solid $--border-c;
+      border-bottom: 1px solid $--border-c;
     }
 
     td {
@@ -246,14 +210,14 @@ table, th, td, thead, tbody {
 
         &:nth-child(odd) {
           &:hover {
-            background-color: #b5e0f655;
-            border: 1px solid #b9d8e8;
+            background-color: $--blizzard-blue;
+            border: 1px solid $--beau-blue;
           }
         }
         &:nth-child(even) {
           &:hover {
-            background-color: #fec4cd55;
-            border: 1px solid #edb1b7;
+            background-color: $--bubble-gum-pink;
+            border: 1px solid $--metalic-pink;
           }
         }
       }
