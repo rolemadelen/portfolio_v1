@@ -10,8 +10,6 @@ const App: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const scrollRef = useRef<HTMLDivElement | null>(null)
 
-  const touchYRef = useRef<number>(0);
-
   useEffect(() => {
     videoRef.current = document.querySelector('video')
     scrollRef.current = document.querySelector('.right')
@@ -58,16 +56,6 @@ const App: React.FC = () => {
       scrollRef.current.scrollTop += (e.deltaY / 2)
   }, [])
 
-  const handleOnTouchStart = useCallback((e: React.TouchEvent) => {
-    touchYRef.current = e.touches[0].pageY;
-  }, [])
-
-  const handleOnTouchMove = useCallback((e: React.TouchEvent) => {
-    const offsetY = (touchYRef.current - e.targetTouches[0].clientY) / 10;
-    if (scrollRef && scrollRef.current)
-      scrollRef.current.scrollTop += offsetY;
-  }, [])
-
   const handleOnContextMenu = useCallback(() => {
     return false
   }, [])
@@ -78,7 +66,7 @@ const App: React.FC = () => {
         <h1 className='splash-name opacity-0 duration-1000'>Jii Eu</h1>
         <h2 className='splash-portfolio opacity-0 duration-1000 text-gray-600'>Portfolio</h2>
       </div >
-      <div className='max-w-screen-2xl mx-auto relative' onWheel={handleOnWheel} onTouchStart={handleOnTouchStart} onTouchMove={handleOnTouchMove}>
+      <div className='max-w-screen-2xl mx-auto relative' onWheel={handleOnWheel}>
         <video onContextMenu={handleOnContextMenu} controls={false} muted={true} loop={false} autoPlay={false} ref={videoRef} className='opacity-0'>
           <source src='/src/assets/madelen-video.webm' type='video/webm; codecs="vp8.0, vorbis"' />
           <source src='/src/assets/madelen-video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
