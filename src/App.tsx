@@ -109,13 +109,13 @@ const App: React.FC = () => {
                 </div>
               </nav>
             </header>
-            <div className='right lg:overflow-scroll h-auto py-16 lg:pt-8 lg:pb-32' onScroll={handleOnScroll} ref={scrollRef}>
+            <div className='right lg:overflow-scroll h-auto pt-20 mb-16 lg:py-8 ' onScroll={handleOnScroll} ref={scrollRef}>
               <Intro />
               <Experience />
               <Skills />
               <Projects />
               <Contact />
-              <a href="#top" className='mr-8 mb-4 md:mb-8 float-right text-xs text-gray-500 rounded-md border-gray-300 border-[1px] w-10 h-10 flex justify-center items-center lg:hidden'>top</a>
+              <a href="#top" className='mr-8 mb-0 md:mb-8 float-right text-xs text-gray-500 rounded-md border-gray-300 border-[1px] w-10 h-10 flex justify-center items-center lg:hidden'>top</a>
             </div>
           </div>
         </div>
