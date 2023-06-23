@@ -21,6 +21,9 @@ $--bc: #e5e5e5;
   --pad: max(20px, 4vmin);
 }
 
+.right a {
+}
+
 div::-webkit-scrollbar {
   display: none;
 }
@@ -232,7 +235,7 @@ table, th, td, thead, tbody {
   }
 }
 
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 1025px) {
   video {
     display: block;
   }
@@ -242,7 +245,11 @@ table, th, td, thead, tbody {
   }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1024px) {
+  * {
+    scroll-behavior: smooth;
+  }
+
   video {
     display: none;
   }
