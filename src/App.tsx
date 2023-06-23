@@ -63,7 +63,7 @@ const App: React.FC = () => {
   }, [])
 
   const handleOnTouchMove = useCallback((e: React.TouchEvent) => {
-    const offsetY = touchYRef.current - e.targetTouches[0].clientY;
+    const offsetY = (touchYRef.current - e.targetTouches[0].clientY) / 10;
     if (scrollRef && scrollRef.current)
       scrollRef.current.scrollTop += offsetY;
   }, [])
