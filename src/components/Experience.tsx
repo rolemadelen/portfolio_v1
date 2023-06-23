@@ -3,7 +3,7 @@ import Work from './Work'
 
 const Experience: React.FC = () => {
   return (
-    <div className='experience mb-8 mx-16' id='experience'>
+    <div className='experience mb-8 mx-8' id='experience'>
       <h2>Work Experience</h2>
       <Work
         date={'Apr 2021 - Jan 2023'}

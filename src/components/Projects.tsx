@@ -5,7 +5,7 @@ import AllProjects from './AllProjects'
 const Projects: React.FC = () => {
   return (
     <>
-      <div className='experience mb-8 mx-16' id='projects'>
+      <div className='experience mb-8 mx-8' id='projects'>
         <h2>Projects</h2>
         <div className='project'>
           <Project

@@ -2,7 +2,7 @@ import React from 'react'
 
 const AllProjects: React.FC = () => {
   return (
-    <div className='experience mb-8 mx-10 sm:mx-16' id='projects'>
+    <div className='experience mb-8 mx-8' id='projects'>
       <h2 className='mb-4'>All Projects</h2>
       <div className='all-projects'>
         <table className='mx-auto'>

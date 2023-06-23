@@ -2,7 +2,7 @@ import React from 'react'
 
 const Intro: React.FC = () => {
   return (
-    <div className='font-light mx-16 sm:mx-20'>
+    <div className='font-light mx-8'>
       <p>
         With a dedication to web development spanning two years, I've cultivated my skills in this
         ever-evolving field. Fueled by boundless curiosity,
@@ -10,7 +10,7 @@ const Intro: React.FC = () => {
       </p>
       <p>
         When I'm not immersed in coding, you'll likely find me enjoying the simple
-        pleasures of life – walking my puppy, creating art on my iPad,
+        pleasures of life – walking my <span className='puppy'>pu</span><span className='puppy2'>ppy</span>, creating art on my iPad,
         playing taiko, or practicing my skills on the shinobue flute.
       </p>
     </div>
