@@ -190,7 +190,7 @@ table, th, td, thead, tbody {
   font-size: 0.8rem;
 }
 
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 1025px) {
   video {
     display: block;
   }
@@ -198,7 +198,10 @@ table, th, td, thead, tbody {
     display: none;
   }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1024px) {
+  * {
+    scroll-behavior: smooth;
+  }
   video {
     display: none;
   }

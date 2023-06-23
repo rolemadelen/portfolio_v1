@@ -10,11 +10,13 @@ const App: React.FC = () => {
   const madelenRef = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const scrollRef = useRef<HTMLDivElement | null>(null)
+  const topRef = useRef<HTMLAnchorElement | null>(null)
 
   useEffect(() => {
     videoRef.current = document.querySelector('video')
     scrollRef.current = document.querySelector('.right')
     madelenRef.current = document.querySelector('.madelen')
+    topRef.current = document.querySelector('.top-btn')
 
     const bg = document.querySelector('.background') as HTMLDivElement
     const splashName = document.querySelector('.splash-name') as HTMLHeadingElement
@@ -34,6 +36,11 @@ const App: React.FC = () => {
       if (videoRef.current) videoRef.current.style.opacity = '1.0'
       if (madelenRef.current) madelenRef.current.style.opacity = '1.0'
       bg.style.width = "90%"
+
+      setTimeout(() => {
+        splashName.style.display = 'none'
+        splashPortfolio.style.display = 'none'
+      }, 800)
     }, 3000)
 
   }, [])
@@ -71,7 +78,7 @@ const App: React.FC = () => {
         <div className='madelen opacity-0'></div>
         <div className='background max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] overflow-hidden'>
           <div className='flex flex-col lg:flex-row h-screen overflow-scroll'>
-            <header className='left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between'>
+            <header className='left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between' id="top">
               <div>
                 <h1 className='text-5xl font-light text-gray-800'>
                   Jii Eu
@@ -108,6 +115,7 @@ const App: React.FC = () => {
               <Skills />
               <Projects />
               <Contact />
+              <a href="#top" className='mr-8 mb-4 md:mb-8 float-right text-xs text-gray-500 rounded-md border-gray-300 border-[1px] w-10 h-10 flex justify-center items-center lg:hidden'>top</a>
             </div>
           </div>
         </div>
