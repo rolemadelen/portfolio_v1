@@ -6,7 +6,7 @@ const Experience: React.FC = () => {
     <div className='experience mb-8 mx-8' id='experience'>
       <h2>Work Experience</h2>
       <Work
-        date={'Apr 2021 - Jan 2023'}
+        date={'Apr 2021 - Feb 2023'}
         role={'Frontend Engineer'}
         location={'Minatomirai, Japan | Remote'}
         company={'Aikomi Inc.'}
