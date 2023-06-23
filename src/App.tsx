@@ -64,13 +64,16 @@ const App: React.FC = () => {
         <h1 className='splash-name opacity-0 transition-opacity duration-1000'>Jii Eu</h1>
         <h2 className='splash-portfolio opacity-0 duration-1000 transition-opacity text-gray-600'>Portfolio</h2>
       </div >
+
       <div className='relative' onWheel={handleOnWheel}>
         <video onContextMenu={handleOnContextMenu} controls={false} muted={true} loop={false} autoPlay={false} ref={videoRef} className='opacity-0 z-[-1] fixed left-0 bottom-0 h-full transition-opacity duration-1000 ease-in-out'>
           <source src='/src/assets/madelen-video.webm' type='video/webm; codecs="vp8.0, vorbis"' />
           <source src='/src/assets/madelen-video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
         </video>
+
         <div className='madelen opacity-0 fixed left-0 bottom-0 bg-cover h-screen w-screen z-[-1] transition-opacity duration-1000 ease-in-out' ref={madelenRef}></div>
-        <div className='background w-0 rounded-sm max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] transition-width duration-1000 ease-in-out overflow-hidden'>
+
+        <div className='background w-0 rounded-sm max-w-screen-2xl m-auto lg:fixed shadow-2xl z-[-1] transition-width duration-1000 ease-in-out overflow-hidden'>
           <div className='flex flex-col lg:flex-row h-screen overflow-scroll'>
             <aside className='aside left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between'>
               <header>
