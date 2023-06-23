@@ -109,7 +109,6 @@ const App: React.FC = () => {
               <Skills />
               <Projects />
               <Footer />
-              <a href="#top" className='mr-8 mb-0 md:mb-8 float-right text-xs text-gray-500 rounded-md border-gray-300 border-[1px] w-10 h-10 flex justify-center items-center lg:hidden'>top</a>
             </div>
           </div>
         </div>
