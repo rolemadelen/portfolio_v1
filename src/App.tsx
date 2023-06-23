@@ -103,7 +103,7 @@ const App: React.FC = () => {
                 </div>
               </nav>
             </aside>
-            <div className='content lg:overflow-scroll h-auto pt-20 lg:py-8 ' onScroll={handleOnScroll} ref={scrollRef}>
+            <div className='content lg:overflow-scroll h-auto py-20 lg:py-8 lg:pb-16' onScroll={handleOnScroll} ref={scrollRef}>
               <Intro />
               <Experience />
               <Skills />
