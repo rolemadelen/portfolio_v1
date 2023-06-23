@@ -32,7 +32,9 @@ $--metalic-pink: #edb1b7;
 :root {
   font-family: 'Montserrat', sans-serif;
   background-color: $--alabaster;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
+
 
 div::-webkit-scrollbar {
   display: none;
