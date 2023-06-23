@@ -18,7 +18,7 @@ const Work: React.FC<Props> = ({ date, role, location, company, skills, website,
   return (
     <>
       <div className='experience-item flex flex-col sm:flex-row mb-8 max-w-[50rem] p-4 border-b' onClick={handleOnClick}>
-        <div className='date text-sm text-gray-600 mr-12 w-40 flex-[0.25]'>
+        <div className='date text-sm text-gray-600 mr-12 w-40 flex-[0.3]'>
           {date}
         </div>
         <div className='detail flex-1'>

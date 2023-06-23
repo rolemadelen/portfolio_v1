@@ -18,7 +18,7 @@ const AllProjects: React.FC = () => {
               <td className='text-sm'>2023</td>
               <td className='text-sm'>
                 <a href="https://github.com/rolemadelen/portfolio" target="_blank" rel="noopener noreferrer">
-                  Portfolio ⬀
+                  Portfolio Website ⬀
                 </a>
               </td>
               <td className='built-with hidden sm:block'>
