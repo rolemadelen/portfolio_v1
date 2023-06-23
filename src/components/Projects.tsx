@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
   return (
     <>
       <div className='experience mb-8 mx-8' id='projects'>
-        <h2>Projects</h2>
+        <h2 className='title'>Projects</h2>
         <div className='project'>
           <Project
             imgsrc={'/src/assets/aikomicare.jpg'}
