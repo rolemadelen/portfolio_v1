@@ -4,6 +4,7 @@ import Skills from './components/Skills'
 import Intro from './components/Intro'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 const App: React.FC = () => {
   const madelenRef = useRef<HTMLDivElement | null>(null)
@@ -110,6 +111,7 @@ const App: React.FC = () => {
               <Experience />
               <Skills />
               <Projects />
+              <Contact />
             </div>
           </div>
         </div>

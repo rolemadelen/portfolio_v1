@@ -61,6 +61,12 @@ video {
   left: var(--pad);
 }
 
+.contact .link {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: from-font;
+}
+
 .left {
   flex: 0.5;
 }
