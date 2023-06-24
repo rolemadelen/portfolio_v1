@@ -11,9 +11,9 @@ const Experience: React.FC = () => {
         location={'Minatomirai, Japan | Remote'}
         company={'Aikomi Inc.'}
         website={'https://aikomi.co.jp/'}
-        skills={['HTML', 'SCSS', 'PHP', 'JavaScript', 'React.js',
-          'AWS Lightsail', 'REST API', 'MySQL',
-          'Technical Documentation', 'Japanese-English Interpretation']
+        skillsHighlight={['HTML', 'SCSS', 'JavaScript', 'React.js',
+          'Technical Documentation', 'Japanese-English Interpretation']}
+        skills={['PHP', 'AWS Lightsail', 'REST API', 'MySQL',]
         }>
         <div className='contribution text-sm text-gray-700 mt-3 mb-5'>
           Built and deployed a brand new website called Aikomi Care, a webiste designed to introduce users to Aikomi Care.
@@ -26,7 +26,8 @@ const Experience: React.FC = () => {
         location={'La Jolla, CA'}
         company={'FASTech LLC.'}
         website={''}
-        skills={['HTML / CSS', 'JavaScript', 'PHP', 'jQuery']
+        skillsHighlight={['HTML', 'CSS', 'JavaScript']}
+        skills={['PHP', 'jQuery']
         }>
         <div className='contribution text-sm text-gray-700 mt-3 mb-5'>
           Developed a subpage that effectively introduced the company's product, utilizing a given template.
@@ -38,8 +39,8 @@ const Experience: React.FC = () => {
         location={'Riverside, CA'}
         company={'Riverside City College'}
         website={'https://www.rcc.edu/student-support/ccc-lab.html'}
-        skills={['Java', 'C++', 'Algorithms', 'Data Structures', 'Debugging', 'MS Word', 'MS Excel',
-          'MS PowerPoint', 'MS Access']
+        skillsHighlight={['C', 'C++', 'Algorithms', 'Data Structures', 'Debugging', 'MS Word', 'MS Excel', 'MS PowerPoint']}
+        skills={['Java', 'MS PowerPoint', 'MS Access']
         }
       >
         <div className='contribution text-sm text-gray-700 mt-3 mb-5'>

@@ -5,12 +5,13 @@ interface Props {
   role: string
   location: string
   company: string
+  skillsHighlight: string[]
   skills: string[]
   website: string
   children: React.ReactNode
 }
 
-const Work: React.FC<Props> = ({ date, role, location, company, skills, website, children }) => {
+const Work: React.FC<Props> = ({ date, role, location, company, skillsHighlight, skills, website, children }) => {
   const handleOnClick = () => {
     if (website !== '')
       window.open(website)
@@ -22,14 +23,17 @@ const Work: React.FC<Props> = ({ date, role, location, company, skills, website,
           {date}
         </div>
         <div className='detail flex-1'>
-          <div className='text-md'>
+          <div className='text-md font-[500]'>
             {role} - {company}
           </div>
-          <div className='location text-sm text-gray-600'>
+          <div className='location text-sm text-gray-500'>
             {location}
           </div>
           {children}
           <ul className='skill-list flex flex-wrap'>
+            {skillsHighlight.map((skill) => {
+              return <li className='skill-item bg-[#e3edff] !border-blue-300' key={skill}>{skill}</li>
+            })}
             {skills.map((skill) => {
               return <li className='skill-item' key={skill}>{skill}</li>
             })}

@@ -11,6 +11,8 @@ const App: React.FC = () => {
   const madelenRef = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const scrollRef = useRef<HTMLDivElement | null>(null)
+  const nameRef = useRef<HTMLHeadingElement | null>(null)
+  const roleRef = useRef<HTMLHeadingElement | null>(null)
 
   useEffect(() => {
     const bg = document.querySelector('.background') as HTMLDivElement
@@ -78,14 +80,14 @@ const App: React.FC = () => {
           <div className='flex flex-col lg:flex-row h-screen overflow-scroll'>
             <aside className='aside left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between'>
               <header>
-                <h1 className='text-5xl font-light text-gray-800'>
+                <h1 className='text-5xl font-light text-gray-800' ref={nameRef}>
                   Jii Eu
                 </h1>
-                <h2 className='mb-12 text-md font-light text-gray-500'>
+                <h2 className='mb-12 text-md text-gray-500' ref={roleRef}>
                   Front-End Developer
                 </h2>
-                <div className='text-md mb-32 max-w-[35rem] font-light text-gray-700'>
-                  I'm a front-end developer currently residing in Kentucky, passionate about crafting creative and simple digital experiences.
+                <div className='text-md mb-32 max-w-[35rem] text-gray-700'>
+                  I'm a front-end developer currently residing in Kentucky — passionate about crafting creative and simple digital experiences.
                 </div>
               </header>
               <nav className='nav text-sm border-b-[1px] border-[#ccc] lg:border-0 pb-20 lg:pb-10 text-gray-800'>
@@ -114,7 +116,7 @@ const App: React.FC = () => {
               <Intro />
               <Experience />
               <Skills />
-              <Languages />
+              <Languages nameRef={nameRef} roleRef={roleRef} />
               <Projects />
               <Footer />
             </div>
