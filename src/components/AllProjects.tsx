@@ -172,7 +172,7 @@ const AllProjects: React.FC = () => {
               </td>
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
-                  <li className='bg-[#e3edff] !border-blue-300'>Ruby</li>
+                  <li>Ruby</li>
                   <li>Ruby on Rails</li>
                   <li className='bg-[#e3edff] !border-blue-300'>JavaScript</li>
                   <li className='bg-[#e3edff] !border-blue-300'>TailwindCSS</li>
@@ -206,7 +206,7 @@ const AllProjects: React.FC = () => {
               </td>
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
-                  <li className='bg-[#e3edff] !border-blue-300'>Ruby</li>
+                  <li>Ruby</li>
                   <li>Web Scraping</li>
                 </ul>
               </td>
