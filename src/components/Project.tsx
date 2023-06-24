@@ -24,7 +24,7 @@ const Project: React.FC<Props> = ({ imgsrc, title, skillsHighlight, skills, link
         {children}
         <ul className='skill-list flex flex-wrap mt-5'>
           {skillsHighlight.map(skill => {
-            return <li className='skill-item bg-[#e3edff] !border-blue-300' key={skill}>{skill}</li>
+            return <li className='skill-item bg-[#e3edff] !border-blue-200' key={skill}>{skill}</li>
           })}
           {skills.map(skill => {
             return <li className='skill-item' key={skill}>{skill}</li>

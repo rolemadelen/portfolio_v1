@@ -31,9 +31,9 @@ const Languages: React.FC<Props> = ({ nameRef, roleRef }) => {
     }
   }
   return (
-    <div className='skills mb-24 mx-8' id='skills'>
+    <div className='skills mb-24 mx-8 text-center' id='skills'>
       <h2 id="lang" className='title' ref={langRef}>Languages</h2>
-      <div className='grid grid-rows-3 grid-cols-3 gap-2 text-center'>
+      <div className='grid grid-rows-3 grid-cols-3 gap-4 text-center inline-grid text-[0.9rem] text-[#555]'>
         <div>Korean</div> <div className='hover:cursor-pointer' onClick={handleOnClick}>🇰🇷</div> <div>Native</div>
         <div>English</div><div className='hover:cursor-pointer' onClick={handleOnClick}>🇺🇸</div> <div>Fluent </div>
         <div>Japanese</div> <div className='hover:cursor-pointer' onClick={handleOnClick}>🇯🇵</div><div> Intermediate</div>

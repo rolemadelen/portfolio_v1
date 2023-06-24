@@ -23,10 +23,10 @@ const AllProjects: React.FC = () => {
               </td>
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
-                  <li className='bg-[#e3edff] !border-blue-300'>React.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TypeScript</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TailwindCSS</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>SCSS</li>
+                  <li className=''>React.js</li>
+                  <li className=''>TypeScript</li>
+                  <li className=''>TailwindCSS</li>
+                  <li className=''>SCSS</li>
                 </ul>
               </td>
             </tr>
@@ -41,9 +41,9 @@ const AllProjects: React.FC = () => {
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
                   <li>Next.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TypeScript</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TailwindCSS</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Styled Component</li>
+                  <li className=''>TypeScript</li>
+                  <li className=''>TailwindCSS</li>
+                  <li className=''>Styled Component</li>
                   <li>Vercel</li>
                 </ul>
               </td>
@@ -59,13 +59,13 @@ const AllProjects: React.FC = () => {
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
                   <li>MongoDB</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>React.js</li>
+                  <li className=''>React.js</li>
                   <li>Redux</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Express.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Node.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TypeScript</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>SCSS</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Axios</li>
+                  <li className=''>Express.js</li>
+                  <li className=''>Node.js</li>
+                  <li className=''>TypeScript</li>
+                  <li className=''>SCSS</li>
+                  <li className=''>Axios</li>
                 </ul>
               </td>
             </tr>
@@ -79,12 +79,12 @@ const AllProjects: React.FC = () => {
               </td>
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
-                  <li className='bg-[#e3edff] !border-blue-300'>HTML</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>JavaScript</li>
+                  <li className=''>HTML</li>
+                  <li className=''>JavaScript</li>
                   <li>PHP</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>SCSS</li>
+                  <li className=''>SCSS</li>
                   <li>AWS Lightsail</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Vite</li>
+                  <li className=''>Vite</li>
                 </ul>
               </td>
             </tr>
@@ -98,10 +98,10 @@ const AllProjects: React.FC = () => {
               </td>
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
-                  <li className='bg-[#e3edff] !border-blue-300'>HTML5</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>SCSS</li>
+                  <li className=''>HTML5</li>
+                  <li className=''>SCSS</li>
                   <li>html2canvas</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>JavaScript</li>
+                  <li className=''>JavaScript</li>
                   <li>Netlify</li>
                 </ul>
               </td>
@@ -117,10 +117,10 @@ const AllProjects: React.FC = () => {
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
                   <li>Next.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Styled Component</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TypeScript</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TailwindCSS</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>SCSS</li>
+                  <li className=''>Styled Component</li>
+                  <li className=''>TypeScript</li>
+                  <li className=''>TailwindCSS</li>
+                  <li className=''>SCSS</li>
                 </ul>
               </td>
             </tr>
@@ -134,12 +134,12 @@ const AllProjects: React.FC = () => {
               </td>
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
-                  <li className='bg-[#e3edff] !border-blue-300'>TypeScript</li>
+                  <li className=''>TypeScript</li>
                   <li>Next.js</li>
                   <li>Prism.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Styled Component</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TailwindCSS</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>SCSS</li>
+                  <li className=''>Styled Component</li>
+                  <li className=''>TailwindCSS</li>
+                  <li className=''>SCSS</li>
                 </ul>
               </td>
             </tr>
@@ -154,11 +154,11 @@ const AllProjects: React.FC = () => {
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
                   <li>Next.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Styled Component</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TypeScript</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TailwindCSS</li>
+                  <li className=''>Styled Component</li>
+                  <li className=''>TypeScript</li>
+                  <li className=''>TailwindCSS</li>
                   <li>Vanta.js</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>SCSS</li>
+                  <li className=''>SCSS</li>
                 </ul>
               </td>
             </tr>
@@ -174,8 +174,8 @@ const AllProjects: React.FC = () => {
                 <ul className='flex'>
                   <li>Ruby</li>
                   <li>Ruby on Rails</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>JavaScript</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>TailwindCSS</li>
+                  <li className=''>JavaScript</li>
+                  <li className=''>TailwindCSS</li>
                   <li>jQuery</li>
                   <li>SQLite3</li>
                 </ul>
@@ -221,10 +221,10 @@ const AllProjects: React.FC = () => {
               </td>
               <td className='built-with hidden sm:block'>
                 <ul className='flex'>
-                  <li className='bg-[#e3edff] !border-blue-300'>C++</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Visual Studio</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Data Structures</li>
-                  <li className='bg-[#e3edff] !border-blue-300'>Algorithms</li>
+                  <li className=''>C++</li>
+                  <li className=''>Visual Studio</li>
+                  <li className=''>Data Structures</li>
+                  <li className=''>Algorithms</li>
                 </ul>
               </td>
             </tr>
