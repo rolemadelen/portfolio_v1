@@ -84,7 +84,7 @@ const App: React.FC = () => {
                   Jii Eu
                 </h1>
                 <h2 className='mb-12 text-md text-gray-500' ref={roleRef}>
-                  Front-End Developer
+                  Front-End Engineer
                 </h2>
                 <div className='text-md mb-32 max-w-[35rem] text-gray-700'>
                   I'm a front-end developer currently residing in Kentucky — passionate about crafting creative and simple digital experiences.

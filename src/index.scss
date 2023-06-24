@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 $--skill-br: 5px;
-$--skill-bc: #ccc;
+$--skill-bc: #999;
 $--skill-m: 0 0.5rem 0.5rem 0;
 $--skill-p: 0.1rem 0.3rem;
 $--skill-fs: 0.8rem;
@@ -120,10 +120,11 @@ video {
 
   .skill-item {
     margin: $--skill-m;
-    border: 1px solid $--skill-bc;
+    border: 1px dashed $--skill-bc;
     border-radius: $--skill-br;
     padding: $--skill-p;
     font-size: $--skill-fs;
+    color: #777;
   }
 
   .experience-item,
@@ -195,13 +196,14 @@ table, th, td, thead, tbody {
       flex-wrap: wrap;
 
       li {
-        border: 1px solid $--skill-bc;
+        border: 1px solid #6b7280;
         border-radius: $--skill-br;
         margin: $--skill-m;
         padding: $--skill-p;
         font-size: $--skill-fs;
         transition: background-color 0.1s ease-in;
         cursor: default;
+        color: #333;
       }
     }
   }
@@ -223,6 +225,13 @@ table, th, td, thead, tbody {
       }
     }
 }
+
+.contribution {
+  div {
+    margin-bottom: 0.5rem;
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   video {
     display: block;

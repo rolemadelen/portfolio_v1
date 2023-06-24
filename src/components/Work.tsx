@@ -32,7 +32,7 @@ const Work: React.FC<Props> = ({ date, role, location, company, skillsHighlight,
           {children}
           <ul className='skill-list flex flex-wrap'>
             {skillsHighlight.map((skill) => {
-              return <li className='skill-item bg-[#e3edff] !border-blue-200' key={skill}>{skill}</li>
+              return <li className='skill-item !text-[#333] !border-solid !border-gray-500' key={skill}>{skill}</li>
             })}
             {skills.map((skill) => {
               return <li className='skill-item' key={skill}>{skill}</li>

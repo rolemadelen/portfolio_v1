@@ -7,11 +7,19 @@ const Projects: React.FC = () => {
     <>
       <div className='experience mb-24 mx-8' id='projects'>
         <h2 className='title'>Projects</h2>
-        <div className='flex items-center ml-4 lg:justify-end text-sm mb-8'>
-          <span className='inline-block bg-[#e3edff] border-2 border-blue-200 w-16 rounded-md h-6'></span>
-          <span className='inline-block mx-2'> — </span>
-          <span className='inline-block'>Primarily Utilized</span>
+        <div className='flex md:flex-row justify-around'>
+          <div className='flex items-center text-sm mb-8 mx-2'>
+            <span className='inline-block'>Proficient</span>
+            <span className='inline-block mx-2'> — </span>
+            <span className='inline-block border-2 border-gray-400 w-16 rounded-md h-6'></span>
+          </div>
+          <div className='flex items-center text-sm mb-8 mx-2'>
+            <span className='inline-block border-2 w-16 border-gray-400 border-2 border-dashed rounded-md h-6'></span>
+            <span className='inline-block mx-2'> — </span>
+            <span className='inline-block'>Familiar</span>
+          </div>
         </div>
+
         <div className='project'>
           <Project
             imgsrc={'/src/assets/aikomicare.gif'}
