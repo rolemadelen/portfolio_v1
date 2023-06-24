@@ -84,10 +84,11 @@ video {
 }
 .content .skill-item {
   margin: 0 0.5rem 0.5rem 0;
-  border: 1px solid #ccc;
+  border: 1px dashed #999;
   border-radius: 5px;
   padding: 0.1rem 0.3rem;
   font-size: 0.8rem;
+  color: #777;
 }
 .content .experience-item,
 .content .project-item {
@@ -146,13 +147,14 @@ table, th, td, thead, tbody {
   flex-wrap: wrap;
 }
 .all-projects .built-with ul li {
-  border: 1px solid #ccc;
+  border: 1px solid #6b7280;
   border-radius: 5px;
   margin: 0 0.5rem 0.5rem 0;
   padding: 0.1rem 0.3rem;
   font-size: 0.8rem;
   transition: background-color 0.1s ease-in;
   cursor: default;
+  color: #333;
 }
 
 .highlight {
@@ -163,6 +165,10 @@ table, th, td, thead, tbody {
   display: inline-block;
   transform: translate(5px, -5px);
   transition: transform 0.3s ease-in-out;
+}
+
+.contribution div {
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (min-width: 1025px) {

@@ -38,11 +38,9 @@ const Skills: React.FC = () => {
           <div className='note text-sm text-gray-500 mb-4'>
             * Below skills are not my current focus; however, I have hands-on experience with these skills from past projects and can swiftly adapt and familiarize myself with their syntax and usage.
           </div>
-          <div className='text-[0.9rem] text-[#555]'>Java / Python / Ruby / Jekyll / Rails / PHP / jQuery / Vue.js</div>
+          <div className='text-[0.9rem] text-[#555]'>C# / Java / Python / Ruby / Jekyll / Rails / PHP / jQuery / Vue.js</div>
         </div>
       </div>
-      <p>
-      </p>
     </div>
   )
 }
