@@ -6,7 +6,6 @@ const Skills: React.FC = () => {
       <h2 className='title'>Skills</h2>
       <div className='flex flex-wrap m-auto justify-between w-[75vw] lg:w-[40vw] xl:w-full'>
         <ul className='languages mx-2 mb-8 w-36'>
-          <li className='skills-title'>Languages</li>
           <li>HTML 5</li>
           <li>CSS 3</li>
           <li>CSS Preprocessors</li>
@@ -15,7 +14,6 @@ const Skills: React.FC = () => {
           <li>C / C++</li>
         </ul>
         <ul className='frameworks mx-2 mb-8 w-36'>
-          <li className='skills-title'>Frameworks</li>
           <li>React.js</li>
           <li>Next.js</li>
           <li>Node.js</li>
@@ -24,7 +22,6 @@ const Skills: React.FC = () => {
           <li>DaisyUI</li>
         </ul>
         <ul className='tools mx-2 w-36'>
-          <li className='skills-title'>Tools</li>
           <li>Git</li>
           <li>Jira</li>
           <li>GitHub / Bitbucket</li>
