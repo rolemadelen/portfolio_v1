@@ -6,28 +6,31 @@ const Skills: React.FC = () => {
       <h2 className='title'>Skills</h2>
       <div className='flex flex-wrap m-auto justify-between w-[75vw] lg:w-[40vw] xl:w-full'>
         <ul className='languages mx-2 mb-8 w-36'>
-          <li className='highlight'>HTML</li>
-          <li className='highlight'>SCSS</li>
-          <li className='highlight'>JavaScript (ES6)</li>
-          <li className='highlight'>TypeScript</li>
-          <li className='highlight'>C / C++</li>
-          <li>SQL</li>
+          <li className='underline uppercase font-semibold'>Languages</li>
+          <li className=''>HTML</li>
+          <li className=''>SCSS</li>
+          <li className=''>JavaScript (ES6)</li>
+          <li className=''>TypeScript</li>
+          <li className=''>C / C++</li>
+          <li>Bash</li>
         </ul>
         <ul className='frameworks mx-2 mb-8 w-36'>
-          <li className='highlight'>React.js</li>
-          <li className='highlight'>TailwindCSS</li>
-          <li className='highlight'>Node.js</li>
-          <li className='highlight'>Express.js</li>
-          <li>Next.js</li>
+          <li className='underline uppercase font-semibold'>Frameworks</li>
+          <li className=''>React.js</li>
+          <li className=''>Next.js</li>
+          <li className=''>TailwindCSS</li>
+          <li className=''>Node.js</li>
+          <li className=''>Express.js</li>
           <li>DaisyUI</li>
         </ul>
         <ul className='tools mx-2 w-36'>
-          <li className='highlight'>Git</li>
-          <li className='highlight'>GitHub / Bitbucket</li>
+          <li className='underline uppercase font-semibold'>Tools</li>
+          <li className=''>Git</li>
+          <li className=''>GitHub / Bitbucket</li>
           <li>Jira</li>
           <li>AWS Lightsail</li>
           <li>MongoDB</li>
-          <li>Netlify / Vercel</li>
+          <li>MySQL</li>
           <li>Figma</li>
         </ul>
 

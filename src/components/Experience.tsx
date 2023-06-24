@@ -5,6 +5,11 @@ const Experience: React.FC = () => {
   return (
     <div className='experience mb-24 mx-8' id='experience'>
       <h2 className='title'>Experience</h2>
+      <div className='flex items-center ml-4 lg:justify-end text-sm mb-8'>
+        <span className='inline-block bg-[#e3edff] border-2 border-blue-200 w-16 rounded-md h-6'></span>
+        <span className='inline-block mx-2'> — </span>
+        <span className='inline-block'>Primarily Utilized</span>
+      </div>
       <Work
         date={'Apr 2021 - Feb 2023'}
         role={'Frontend Engineer'}
@@ -13,7 +18,7 @@ const Experience: React.FC = () => {
         website={'https://aikomi.co.jp/'}
         skillsHighlight={['HTML', 'SCSS', 'JavaScript', 'React.js',
           'Technical Documentation', 'Japanese-English Interpretation']}
-        skills={['PHP', 'AWS Lightsail', 'REST API', 'MySQL',]
+        skills={['AWS Lightsail', 'Cron Jobs', 'PHP', 'Node', 'MySQL',]
         }>
         <div className='contribution text-sm text-gray-700 mt-3 mb-5'>
           Built and deployed a brand new website called Aikomi Care, a webiste designed to introduce users to Aikomi Care.
@@ -39,8 +44,8 @@ const Experience: React.FC = () => {
         location={'Riverside, CA'}
         company={'Riverside City College'}
         website={'https://www.rcc.edu/student-support/ccc-lab.html'}
-        skillsHighlight={['C', 'C++', 'Algorithms', 'Data Structures', 'Debugging', 'MS Word', 'MS Excel', 'MS PowerPoint']}
-        skills={['Java', 'MS PowerPoint', 'MS Access']
+        skillsHighlight={['C', 'C++', 'Java', 'Algorithms', 'Data Structures', 'Debugging', 'MS Excel', 'MS Access']}
+        skills={['MS Word', 'MS PowerPoint']
         }
       >
         <div className='contribution text-sm text-gray-700 mt-3 mb-5'>
