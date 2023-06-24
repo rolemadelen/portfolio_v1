@@ -3,31 +3,22 @@ import Work from './Work'
 
 const Experience: React.FC = () => {
   return (
-    <div className='experience mb-8 mx-8' id='experience'>
-      <h2 className='title'>Work Experience</h2>
+    <div className='experience mb-24 mx-8' id='experience'>
+      <h2 className='title'>Experience</h2>
       <Work
         date={'Apr 2021 - Feb 2023'}
         role={'Frontend Engineer'}
         location={'Minatomirai, Japan | Remote'}
         company={'Aikomi Inc.'}
         website={'https://aikomi.co.jp/'}
-        skills={['HTML / CSS', 'SCSS', 'JavaScript', 'React.js',
-          'Vite', 'AWS Lightsail', 'REST API', 'MySQL', 'Adobe XD',
+        skills={['HTML', 'SCSS', 'PHP', 'JavaScript', 'React.js',
+          'AWS Lightsail', 'REST API', 'MySQL',
           'Technical Documentation', 'Japanese-English Interpretation']
         }>
         <div className='contribution text-sm text-gray-700 mt-3 mb-5'>
           Built and deployed a brand new website called Aikomi Care, a webiste designed to introduce users to Aikomi Care.
           Also contributed in maintaining and updating the UI, ensuring its consistent functionality, usability, and visual appeal through regular monitoring and proactive updates.
         </div>
-      </Work>
-      <Work
-        date={'Apr 2020 - Mar 2021'}
-        role={'Foreign Language Teacher'}
-        location={'Fujisawa, Japan'}
-        company={'Borderlirk, Inc.'}
-        website={'https://www.borderlink.co.jp/alt/whats_an_alt.html'}
-        skills={[]}
-      >
       </Work>
       <Work
         date={'Winter 2017'}
@@ -55,6 +46,11 @@ const Experience: React.FC = () => {
           Provided programming support in C++ and Java, assisting students with assignments and projects. And tutored students in CS and CIS Software enhancing their proficiency in essential tools.
         </div>
       </Work>
+      <div className='mx-auto hover:text-blue-500'>
+        <a href="/resume.pdf" className='text-md hover:pl-4 duration-300'>
+          View Résumé →
+        </a>
+      </div>
     </div >
   )
 }

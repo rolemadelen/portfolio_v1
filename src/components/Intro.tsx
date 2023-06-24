@@ -2,7 +2,7 @@ import React from 'react'
 
 const Intro: React.FC = () => {
   return (
-    <div className='text-md font-light mx-8 lg:mt-[7.5rem]'>
+    <div className='text-md font-light mx-8 mb-24 lg:mt-[7.5rem]'>
       <p>
         With a dedication to web development spanning two years, I've cultivated my skills in this
         ever-evolving field. Fueled by boundless curiosity,

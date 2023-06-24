@@ -73,7 +73,7 @@ const App: React.FC = () => {
 
         <div className='madelen opacity-0 fixed left-0 bottom-0 bg-cover h-screen w-screen z-[-1] transition-opacity duration-1000 ease-in-out' ref={madelenRef}></div>
 
-        <div className='background w-0 rounded-sm max-w-screen-2xl m-auto lg:fixed shadow-2xl z-[-1] transition-width duration-1000 ease-in-out overflow-hidden'>
+        <div className='background w-0 rounded-sm max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] transition-width duration-1000 ease-in-out overflow-hidden'>
           <div className='flex flex-col lg:flex-row h-screen overflow-scroll'>
             <aside className='aside left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between'>
               <header>
@@ -99,14 +99,17 @@ const App: React.FC = () => {
                     <a className='nav-item' href='https://www.bepersistent.dev/' target="_blank" rel="noopener noreferrer">Blog</a>
                   </li>
                 </ul>
-                <div>
+                <div className='flex flex-col'>
+                  <a href="/resume.pdf" className='nav-item'>
+                    Résumé
+                  </a>
                   <a className='nav-item' href="mailto:eu.jii@protonmail.com">
                     eu.jii@protonmail.com
                   </a>
                 </div>
               </nav>
             </aside>
-            <div className='content lg:overflow-scroll h-auto pt-16 lg:py-8' onScroll={handleOnScroll} ref={scrollRef}>
+            <div className='content lg:overflow-scroll h-auto pt-16 lg:py-8 mb-20' onScroll={handleOnScroll} ref={scrollRef}>
               <Intro />
               <Experience />
               <Skills />
