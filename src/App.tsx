@@ -5,6 +5,7 @@ import Intro from './components/Intro'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
+import Languages from './components/Languages'
 
 const App: React.FC = () => {
   const madelenRef = useRef<HTMLDivElement | null>(null)
@@ -113,6 +114,7 @@ const App: React.FC = () => {
               <Intro />
               <Experience />
               <Skills />
+              <Languages />
               <Projects />
               <Footer />
             </div>
