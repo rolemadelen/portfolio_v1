@@ -124,19 +124,6 @@ video {
     border-radius: $--skill-br;
     padding: $--skill-p;
     font-size: $--skill-fs;
-
-    &:nth-child(odd) {
-      &:hover {
-        background-color: $--blizzard-blue;
-        border: 1px solid $--beau-blue;
-      }
-    }
-    &:nth-child(even) {
-      &:hover {
-        background-color: $--bubble-gum-pink;
-        border: 1px solid $--metalic-pink;
-      }
-    }
   }
 
   .experience-item,
@@ -146,6 +133,12 @@ video {
     &:hover {
       cursor: pointer;
       box-shadow: 0px 0px 3px 0px $--gray;
+
+      .arrow {
+        display: inline-block;
+        transform: translate(5px, -5px);
+        transition: transform 0.3s ease-in-out;
+      }
     }
   }
 
@@ -209,24 +202,27 @@ table, th, td, thead, tbody {
         font-size: $--skill-fs;
         transition: background-color 0.1s ease-in;
         cursor: default;
-
-        &:nth-child(odd) {
-          &:hover {
-            background-color: $--blizzard-blue;
-            border: 1px solid $--beau-blue;
-          }
-        }
-        &:nth-child(even) {
-          &:hover {
-            background-color: $--bubble-gum-pink;
-            border: 1px solid $--metalic-pink;
-          }
-        }
       }
     }
   }
 }
 
+.highlight {
+  font-weight: 600;
+}
+
+
+.all-projects {
+    a {
+      &:hover {
+        .arrow {
+          display: inline-block;
+          transform: translate(5px, -5px);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+}
 @media only screen and (min-width: 1025px) {
   video {
     display: block;

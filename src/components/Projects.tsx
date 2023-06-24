@@ -11,7 +11,8 @@ const Projects: React.FC = () => {
           <Project
             imgsrc={'/src/assets/aikomicare.jpg'}
             title={'Aikomiケア Website'}
-            skills={['Vite', 'JavaScript', 'PHP', 'SCSS', 'AWS Lightsail']}
+            skillsHighlight={['Vite', 'JavaScript', 'HTML', 'SCSS']}
+            skills={['PHP', 'AWS Lightsail']}
             link={'https://aikomicare.com/'}>
             <div className='text-sm'>
               A webiste designed to introduce users to Aikomi Care and step-by-step guidance throughout their entire service experience.
@@ -20,7 +21,8 @@ const Projects: React.FC = () => {
           <Project
             imgsrc={'/src/assets/minimalistblog.jpg'}
             title={'Minimalist | Personal Blog'}
-            skills={['TypeScript', 'Next.js', 'TailwindCSS', 'Styled Component', 'Vercel']}
+            skillsHighlight={['TypeScript', 'TailwindCSS', 'Styled Component', 'Vercel']}
+            skills={['Next.js']}
             link={'https://www.bepersistent.dev/'}>
             <div className='text-sm'>
               Created a minimalist-inspired blog featuring clean aesthetics and a focus on simplicity, providing users with a distraction-free reading experience.
@@ -29,7 +31,8 @@ const Projects: React.FC = () => {
           <Project
             imgsrc={'/src/assets/artlog.jpg'}
             title={'Artlog'}
-            skills={['MongoDB', 'Express.js', 'React.js', 'Redux', 'Node.js', 'TypeScript', 'SCSS', 'Axios']}
+            skillsHighlight={['Node.js', 'React.js', 'Express.js', 'Node.js', 'TypeScript', 'SCSS', 'Axios']}
+            skills={['MongoDB', 'Redux']}
             link={'https://artlogs.netlify.app/'}>
             <div className='text-sm'>
               Created Artlog as a personal endeavor, curating a visual diary of my daily outfits as a hobby artist, fostering creativity and self-expression in the realm of minimalist fashion.
@@ -38,7 +41,8 @@ const Projects: React.FC = () => {
           <Project
             imgsrc={'/src/assets/portfolio.jpg'}
             title={'www.jiieu.com'}
-            skills={['React.js', 'TypeScript', 'TailwindCSS', 'SCSS']}
+            skillsHighlight={['React.js', 'TypeScript', 'TailwindCSS', 'SCSS']}
+            skills={[]}
             link={'https://www.jiieu.com'}
           >
             <div className='text-sm'>
