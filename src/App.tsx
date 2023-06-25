@@ -112,7 +112,7 @@ const App: React.FC = () => {
                   </li>
                 </ul>
                 <div className='flex flex-col'>
-                  <a href="/cv" className='cv nav-item'>
+                  <a href="/#/cv" className='cv nav-item'>
                     <span>૮</span> ･ ﻌ･<span>ა</span> CV
                   </a>
                   <a className='nav-item' href="mailto:eu.jii@protonmail.com">
