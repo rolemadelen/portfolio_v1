@@ -101,8 +101,7 @@ video {
 }
 .content .experience-item:hover .arrow,
 .content .project-item:hover .arrow {
-  display: inline-block;
-  transform: translate(5px, -5px);
+  transform: translate(3px, -3px);
   transition: transform 0.3s ease-in-out;
 }
 .content .puppy {
@@ -110,6 +109,16 @@ video {
 }
 .content .puppy2 {
   cursor: url("/src/assets/puppy2.png"), default;
+}
+
+.arrow {
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-in-out;
+  background-image: url(/src/assets/upright.png);
+  background-size: cover;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
 }
 
 h1 {
@@ -163,7 +172,7 @@ table, th, td, thead, tbody {
 
 .all-projects a:hover .arrow {
   display: inline-block;
-  transform: translate(5px, -5px);
+  transform: translate(3px, -3px);
   transition: transform 0.3s ease-in-out;
 }
 
