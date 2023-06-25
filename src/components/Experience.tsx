@@ -80,7 +80,7 @@ const Experience: React.FC = () => {
           </div>
         </div>
       </Work>
-      <div className='mx-auto hover:text-blue-500'>
+      <div className='mx-auto text-blue-800 hover:text-blue-500'>
         <a href="/resume.pdf" className='text-md hover:pl-4 duration-300'>
           View Résumé →
         </a>
