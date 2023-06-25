@@ -13,6 +13,7 @@ const App: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const nameRef = useRef<HTMLHeadingElement | null>(null)
   const roleRef = useRef<HTMLHeadingElement | null>(null)
+  const innerRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     const bg = document.querySelector('.background') as HTMLDivElement
@@ -57,6 +58,14 @@ const App: React.FC = () => {
       scrollRef.current.scrollTop += (e.deltaY / 2)
   }, [])
 
+  const handleOnClick = useCallback(() => {
+    if (!scrollRef || !scrollRef.current) return;
+    if (!innerRef || !innerRef.current) return;
+
+    scrollRef.current.scrollTop = 0;
+    innerRef.current.scrollTop = 0;
+  }, [])
+
   const handleOnContextMenu = useCallback(() => {
     return false
   }, [])
@@ -77,7 +86,7 @@ const App: React.FC = () => {
         <div className='madelen opacity-0 fixed left-0 bottom-0 bg-cover h-screen w-screen z-[-1] transition-opacity duration-1000 ease-in-out' ref={madelenRef}></div>
 
         <div className='background w-0 rounded-sm max-w-screen-2xl m-auto fixed shadow-2xl z-[-1] transition-width duration-1000 ease-in-out overflow-hidden'>
-          <div className='flex flex-col lg:flex-row h-screen overflow-scroll'>
+          <div className='inner flex flex-col lg:flex-row h-screen overflow-scroll' ref={innerRef}>
             <aside className='aside left main header mx-8 pt-4 lg:pt-8 lg:pb-20 flex flex-col justify-between'>
               <header>
                 <h1 className='text-5xl font-light text-gray-800' ref={nameRef}>
@@ -103,8 +112,8 @@ const App: React.FC = () => {
                   </li>
                 </ul>
                 <div className='flex flex-col'>
-                  <a href="/resume.pdf" className='nav-item'>
-                    Résumé
+                  <a href="/cv" className='cv nav-item'>
+                    <span>૮</span> ･ ﻌ･<span>ა</span> CV
                   </a>
                   <a className='nav-item' href="mailto:eu.jii@protonmail.com">
                     eu.jii@protonmail.com
@@ -118,7 +127,7 @@ const App: React.FC = () => {
               <Skills />
               <Languages nameRef={nameRef} roleRef={roleRef} />
               <Projects />
-              <Footer />
+              <Footer handleOnClick={handleOnClick} />
             </div>
           </div>
         </div>

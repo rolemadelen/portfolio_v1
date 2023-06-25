@@ -1,0 +1,21 @@
+.skills ~ ul li {
+  font-size: 0.8rem;
+  margin: 0.5rem auto;
+}
+
+.main-content .left {
+  flex: 0.4;
+}
+.main-content .right {
+  flex: 0.6;
+}
+
+.experience ul {
+  margin-bottom: 2rem !important;
+}
+
+.predominant li {
+  margin: 0.1rem auto !important;
+}
+
+/*# sourceMappingURL=cv.css.map */
