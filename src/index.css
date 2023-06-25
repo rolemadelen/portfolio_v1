@@ -197,12 +197,12 @@ table, th, td, thead, tbody {
   text-decoration: unset !important;
 }
 .top:hover::before {
-  content: "wolf";
+  content: "woof";
   font-size: 0.8rem;
   margin-right: 0.5rem;
 }
 .top:hover::after {
-  content: "wolf";
+  content: "woof";
   font-size: 0.8rem;
   margin-left: 0.5rem;
 }
