@@ -4,7 +4,8 @@ export const CVWrapper = tw.div`
 flex
 flex-col 
 py-8 
-px-12 
+px-8
+sm:px-12
 max-w-4xl 
 mx-auto
 `
@@ -17,7 +18,9 @@ mb-12
 `
 
 export const Name = tw.div`
-text-5xl
+text-3xl
+sm:text-5xl
+
 tracking-tight
 text-[#5172b7]
 `
@@ -33,6 +36,10 @@ export const Contact = tw.div`
 leading-tight
 text-[0.8rem]
 text-[#777]
+flex-auto
+flex-wrap
+w-36
+text-right
 `
 
 export const ContactLink = tw.div`
