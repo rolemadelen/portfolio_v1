@@ -232,6 +232,54 @@ table, th, td, thead, tbody {
   }
 }
 
+.cv {
+  span {
+    display: inline-block;
+    transform: rotateZ(0);
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    text-decoration: unset !important;
+    letter-spacing: 1.5px;
+
+    span:first-child {
+      transform: rotateZ(90deg);
+    }
+    span:last-child {
+      transform: rotateZ(-90deg);
+    }
+  }
+}
+
+.top {
+  span {
+    display: inline-block;
+    transform: rotateZ(0);
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    &::before {
+      content: 'wolf';
+      font-size: 0.8rem;
+      margin-right: 0.5rem;
+    }
+    &::after {
+      content: 'wolf';
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+    }
+    cursor: pointer;
+    text-decoration: unset !important;
+
+    span:first-child {
+      transform: translateY(-5px) rotateZ(90deg);
+    }
+    span:last-child {
+      transform: translateY(-5px) rotateZ(-90deg);
+    }
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   video {
     display: block;
