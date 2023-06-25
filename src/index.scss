@@ -259,12 +259,12 @@ table, th, td, thead, tbody {
   }
   &:hover {
     &::before {
-      content: 'wolf';
+      content: 'woof';
       font-size: 0.8rem;
       margin-right: 0.5rem;
     }
     &::after {
-      content: 'wolf';
+      content: 'woof';
       font-size: 0.8rem;
       margin-left: 0.5rem;
     }
